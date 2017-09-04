@@ -20,7 +20,7 @@ def solve():
 		dist.append(set())
 		for pos in dist[-2]:
 			for sub_pos in get_moves(pos):
-				if sub_pos not in dist[-1] and sub_pos not in dist[-2] and sub_pos not in dist[-3]:
+				if sub_pos not in dist[-2] and sub_pos not in dist[-3]:
 					dist[-1].add(sub_pos)
 		print('Depth ' + str(len(dist) - 1) + ': ' + str(len(dist[-1])) + ' positions')
 	print('2x2 Depth is ' + str(len(dist) - 2) + ', solved in ' + str(round(time.time() - start_time, 2)) + ' seconds')
